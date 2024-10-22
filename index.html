@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+
+    <style>
+        .rotate-animation {
+            transition: transform 0.6s;
+        }
+
+        .rotate-animation:hover {
+            transform: rotate(360deg);
+        }
+
+        .diagonal-bg {
+            background: linear-gradient(155deg, #260161 50%, #d8dce1 50%);
+        }
+
+        .icon-size {
+            width: 100px;
+            height:100px;
+        }
+
+
+        .icon-background {
+            background-color: white;
+            padding: 4px;
+            border-radius: 100%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 p-5">
+    <div id="assignment" class="mx-2 lg:mx-4 px-16 py-6 diagonal-bg bg-white">
+        <h1 class="text-left text-4xl font-bold mb-20 text-white uppercase">Our Services</h1>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-20 lg:gap-6">
+
+            <!-- Service Box 1 -->
+            <div class="rotate-animation flex flex-col items-center py-6 px-3 bg-white shadow-lg rounded-sm relative">
+                <div class="icon-wrapper absolute top-0 transform -translate-y-1/2">
+                    <img src="./assets/emergancy.png" alt="Emergency Plumbing Icon"
+                        class="icon-size icon-background border-4 border-violet-950">
+                </div>
+                <h2 class="text-xl text-center font-bold mt-8 mb-2">Emergency Plumbing Services</h2>
+                <p class="text-gray-800 text-center mb-4">Our plumbers are ready to go 24/7 for emergencies, including
+                    nights, weekends, and holidays.</p>
+                <a href="#" class="text-indigo-800 font-semibold hover:underline uppercase">Explore This Service <span class="font-bold text-lg">&gt;</span></a>
+            </div>
+
+            <!-- Service Box 2 -->
+            <div class="rotate-animation flex flex-col items-center py-6 px-3 bg-white shadow-lg rounded-lg relative">
+                <div class="icon-wrapper absolute top-0 transform -translate-y-1/2">
+                    <img src="./assets/drains.png" alt="Drains Icon"
+                        class="icon-size icon-background border-4 border-violet-950">
+                </div>
+                <h2 class="text-xl font-bold mt-8 mb-2">Plumbing and Drains</h2>
+                <p class="text-gray-800 text-center mb-4">As the largest plumbing and drain service company, we make
+                    thousands of repairs every day.</p>
+                <a href="#" class="text-indigo-800 font-semibold hover:underline uppercase text-center">Explore This Service <span class="font-bold text-lg">&gt;</span></a>
+            </div>
+
+            <!-- Service Box 3 -->
+            <div class="rotate-animation flex flex-col items-center py-6 px-3 bg-white shadow-lg rounded-lg relative">
+                <div class="icon-wrapper absolute top-0 transform -translate-y-1/2">
+                    <img src="./assets/water-damage.png" alt="Water Damage Icon"
+                        class="icon-size icon-background border-4 border-violet-950">
+                </div>
+                <h2 class="text-xl font-bold mt-8 mb-2">Water Damage</h2>
+                <p class="text-gray-800 text-center mb-4">Our teams are equipped with state-of-the-art water extraction
+                    and cleanup equipment.</p>
+                <a href="#" class="text-indigo-800 font-semibold hover:underline uppercase text-center">Explore This Service <span class="font-bold text-lg">&gt;</span></a>
+            </div>
+
+            <!-- Service Box 4 -->
+            <div class="rotate-animation flex flex-col items-center py-6 px-3 bg-white shadow-lg rounded-lg relative">
+                <div class="icon-wrapper absolute top-0 transform -translate-y-1/2">
+                    <img src="./assets/water-heater.png" alt="Water Heater Icon"
+                        class="icon-size icon-background border-4 border-violet-950">
+                </div>
+                <h2 class="text-xl font-bold mt-8 mb-2">Water Heaters</h2>
+                <p class="text-gray-800 text-center mb-4">Trust us for repair and replacement of gas, electric, and
+                    tankless water heaters.</p>
+                <a href="#" class="text-indigo-800 font-semibold hover:underline uppercase text-center">Explore This Service <span class="font-bold text-lg">&gt;</span></a>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll('.rotate-animation').forEach(item => {
+            item.addEventListener('mouseover', () => {
+                anime({
+                    targets: item,
+                    rotate: '1turn',
+                    duration: 600,
+                });
+            });
+        });
+    </script>
+</body>
+</html>
